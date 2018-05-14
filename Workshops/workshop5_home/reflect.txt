@@ -1,0 +1,62 @@
+Name: Ilias Halemi
+ID: 062 111 133
+Date: 02/20/2018
+
+WORKSHOP 5 - REFLECTION
+
+1. The operator+ should not return a reference to the Fraction object since its return type is a Fraction object and we want our changes to be applied to the current object. Therefore, the operator+ function returns a copy of the current object thus the changes being made inside the function are applied after going out of scope but if a reference to the current object was returned then the changes would not be applied.
+
+2. There are a total of 5 temporary Fraction objects in the tester module, objects a through e.
+
+3. I use the isEmpty() function to minimize code duplication in my display and operator functions to check if my fractions are empty or not. Furthermore, I use the reduce() function whenever I need the resulting fraction reduced like in my operator+ and operator* functions.
+
+4. This workshop I have learned how to properly overload function and understanding that the return type for operators vary. For example, when overloading == we would use a bool return type while overloading * we would return a copy of the current object like Fraction. 
+
+
+QUIZ 5 REFLECTION - MARK 9/10
+ 	
+
+// VideoGame.h File
+
+#ifndef QUIZ05_VIDEOGAME_H
+
+#define QUIZ05_VIDEOGAME_H
+
+namespace quiz05 {
+
+class VideoGame {
+
+int m_health;
+
+char* m_name; // FIXED 
+
+public:
+
+VideoGame();
+
+VideoGame(const char*, int health = 100);
+
+~VideoGame();
+
+}
+
+}
+
+#endif
+
+
+// VideoGame.cpp File
+
+#include "VideoGame.h"
+
+namespace quiz05 {
+
+VideoGame::VideoGame() {
+
+this->name = nullptr; // FIXED; used this-> and set to nullptr instead of '\0'
+
+this->health = 0;     // FIXED
+
+}
+
+}
