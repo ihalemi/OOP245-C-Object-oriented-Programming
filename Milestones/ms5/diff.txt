@@ -1,0 +1,10 @@
+
+In line number 174 of your output:
+The output should be:
+ Sku: 1234
+But your output is: 
+ Sku: water
+      ^
+------|
+Professor's character ASCII code: hex(31), dec(49)
+un-matched character ASCII code: hex(77), dec(119)
